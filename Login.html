@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to Gold Jewellery to view your orders and wishlist.">
+  <link rel="canonical" href="login.html">
   <title>Login | Gold Jewellery</title>
   <style>
     body {
@@ -37,18 +39,20 @@
     button:hover {
       background: darkgoldenrod;
     }
+    .form-container h2 { margin: 0 0 8px 0; }
+    .form-container p { margin: 6px 0 0 0; }
   </style>
 </head>
 <body>
-  <div class="form-container">
+  <main class="form-container" id="main">
     <h2>Login</h2>
     <form id="loginForm">
-      <input type="email" placeholder="Email" required><br>
-      <input type="password" placeholder="Password" required><br>
+      <input type="email" placeholder="Email" name="email" autocomplete="email" required aria-label="Email"><br>
+      <input type="password" placeholder="Password" name="password" autocomplete="current-password" required aria-label="Password"><br>
       <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="register.html">Register</a></p>
-  </div>
+  </main>
 
   <script>
     document.getElementById("loginForm").addEventListener("submit", function(event){

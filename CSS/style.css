@@ -1,74 +1,26 @@
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: #fffaf0;
-  color: #333;
-  line-height: 1.6;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: #fffaf0; color: #333; line-height: 1.6; font-family: Arial, sans-serif; }
 
 /* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: goldenrod;
-  padding: 15px 30px;
-  color: white;
-}
+header { display: flex; justify-content: space-between; align-items: center; background: goldenrod; padding: 15px 30px; color: white; }
 
 header .logo {
   font-size: 20px;
   font-weight: bold;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
+nav a { color: white; text-decoration: none; margin: 0 10px; }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: url('img/hero.jpg') no-repeat center/cover;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: darkred;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
+/* Legacy hero removed; homepage defines its own hero styles inline */
 
 /* Page Sections */
-.page {
-  padding: 50px;
-  text-align: center;
-}
+.page { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
 
 .page h1 {
   margin-bottom: 20px;
@@ -77,24 +29,11 @@ nav a:hover {
 }
 
 /* Product Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-}
+.card { background: white; border: 1px solid #eee; border-radius: 12px; padding: 16px; box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
+.card img { width: 100%; height: auto; border-radius: 10px; display: block; }
 
 .card h2 {
   margin: 10px 0;
@@ -102,21 +41,11 @@ nav a:hover {
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: goldenrod;
-  color: white;
-  margin-top: 30px;
-}
+footer { text-align: center; padding: 15px; background: goldenrod; color: white; margin-top: 30px; }
 
 
 /* Why Choose Us Section */
-.why-us {
-  padding: 50px;
-  text-align: center;
-  background: #fff3cd;
-}
+.why-us { padding: 50px 20px; text-align: center; background: #fff3cd; }
 
 .why-us h1 {
   margin-bottom: 20px;

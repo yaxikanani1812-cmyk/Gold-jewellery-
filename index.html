@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gold jewellery inspired by Indian traditions: handcrafted 22K necklaces, earrings, and bangles. Elegant, festive, and luxurious designs.">
+  <link rel="canonical" href="index.html">
+  <meta property="og:title" content="Gold Jewellery | Radiant Traditions">
+  <meta property="og:description" content="Celebrate cultural elegance with handcrafted gold necklaces, earrings, and bangles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="index.html">
+  <meta property="og:image" content="img/Siderbar/1.jpg.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Gold Jewellery | Home</title>
   <style>
     body {
@@ -36,61 +44,125 @@
       color: #4b2e0f;
     }
 
-    /* Slider */
-    .slider {
+    /* Hero */
+    .hero {
       position: relative;
-      max-width: 100%;
-      height: 500px;
-      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 40px 30px;
+      border-radius: 16px;
       overflow: hidden;
-      border-radius: 12px;
+      background: radial-gradient(1200px 400px at 10% 20%, #ffe7b3 0%, #f7d88a 35%, #e8c46a 65%, #d4a017 100%);
+      box-shadow: 0 10px 30px rgba(212,160,23,0.25);
+      color: #4b2e0f;
+      min-height: 420px;
     }
 
-    .slides img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover; /* image resize with proportion */
-      display: none;
-    }
-
-    .slides img.active {
-      display: block;
-    }
-
-    .prev, .next {
+    /* Soft sparkle field */
+    .hero::before,
+    .hero::after {
+      content: "";
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      border-radius: 50%;
+      inset: 0;
+      pointer-events: none;
     }
 
-    .prev { left: 10px; }
-    .next { right: 10px; }
+    /* Subtle grain for luxury texture */
+    .hero::before {
+      background-image: radial-gradient(rgba(255,255,255,0.35) 0.8px, rgba(0,0,0,0) 0.8px);
+      background-size: 3px 3px;
+      opacity: 0.25;
+    }
 
-    .dots {
-      text-align: center;
+    /* Light sparkles */
+    .hero::after {
+      background-image:
+        radial-gradient(4px 4px at 12% 30%, rgba(255,255,255,0.9) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(3px 3px at 30% 18%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(5px 5px at 42% 70%, rgba(255,255,255,0.9) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(3px 3px at 65% 20%, rgba(255,255,255,0.7) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(4px 4px at 78% 55%, rgba(255,255,255,0.85) 0, rgba(255,255,255,0) 60%),
+        radial-gradient(3px 3px at 90% 30%, rgba(255,255,255,0.75) 0, rgba(255,255,255,0) 60%);
+      animation: twinkle 6s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 0.75; }
+    }
+
+    .hero .content {
+      z-index: 1;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 44px;
+      line-height: 1.15;
+      color: #3a220a;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 18px;
+      color: #5a3a16;
+    }
+
+    .hero .sub {
       margin-top: 10px;
+      font-size: 16px;
+      color: #6b4a1e;
     }
 
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 5px;
-      background-color: #bbb;
-      border-radius: 50%;
+    .hero .cta {
       display: inline-block;
-      cursor: pointer;
+      margin-top: 18px;
+      padding: 12px 20px;
+      background-color: #4b2e0f;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
-    .dot.active {
-      background-color: #d4a017;
+    .hero .cta:hover {
+      background-color: #6a3c14;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(75,46,15,0.25);
     }
+
+    .hero .model {
+      position: relative;
+      justify-self: end;
+      width: 100%;
+      max-width: 520px;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      border: 2px solid rgba(255,255,255,0.55);
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+      }
+      .hero .model {
+        justify-self: center;
+        max-width: 420px;
+        margin-top: 20px;
+      }
+    }
+
+    /* Slider removed */
 
     /* Footer */
     footer {
@@ -102,8 +174,22 @@
       font-size: 14px;
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gold Jewellery",
+    "url": "index.html",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "products.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
 
   <!-- Header / Navbar -->
   <header>
@@ -117,63 +203,26 @@
     </nav>
   </header>
 
-  <!-- Slider Section -->
-  <div class="slider">
-    <div class="slides">
-      <img src="img/Siderbar/2.jpg.jpg" alt="Gold Ring" class="active">
-      <img src="img/Siderbar/Beige Minimalist Jewelry Store Facebook Ad.jpg" alt="Gold Necklace">
-      <img src="img/Siderbar/1.jpg.jpg" alt="Gold Earrings">
-      <!-- <img src="img/Siderbar/2.jpg.jpg" alt="Gold Earrings"> -->
-
+  <!-- Hero Section -->
+  <main id="main">
+  <section class="hero" aria-label="Festive gold jewellery hero">
+    <div class="content">
+      <h1>Radiant Traditions</h1>
+      <p>Celebrate cultural elegance with handcrafted gold necklaces, earrings, and bangles.</p>
+      <div class="sub">Gracefully designed for weddings, festivities, and treasured moments.</div>
+      <a class="cta" href="products.html">Shop Gold Collection</a>
     </div>
-    <button class="prev" onclick="moveSlide(-1)">❮</button>
-    <button class="next" onclick="moveSlide(1)">❯</button>
-  </div>
-
-  <!-- Dots -->
-  <div class="dots">
-    <span class="dot active" onclick="currentSlide(0)"></span>
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-  </div>
+    <img class="model" src="img/Siderbar/Blue Gray Modern Jewellery Facebook Ad.jpg" alt="Graceful Indian woman wearing traditional gold necklace, earrings, and bangles" loading="eager" fetchpriority="high">
+  </section>
+  </main>
+  
 
   <!-- Footer -->
   <footer>
     © 2025 Gold Jewellery. All Rights Reserved.
   </footer>
 
-  <!-- JavaScript for Slider -->
-  <script>
-    let slideIndex = 0;
-    let slides = document.querySelectorAll(".slides img");
-    let dots = document.querySelectorAll(".dot");
-
-    function showSlide(n) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        dots[i].classList.remove("active");
-      });
-      slides[n].classList.add("active");
-      dots[n].classList.add("active");
-      slideIndex = n;
-    }
-
-    function moveSlide(step) {
-      slideIndex += step;
-      if (slideIndex >= slides.length) slideIndex = 0;
-      if (slideIndex < 0) slideIndex = slides.length - 1;
-      showSlide(slideIndex);
-    }
-
-    function currentSlide(n) {
-      showSlide(n);
-    }
-
-    // Auto slide every 4 sec
-    setInterval(() => {
-      moveSlide(1);
-    }, 4000);
-  </script>
+  
 
 </body>
 </html>
