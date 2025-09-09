@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Jewellery | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff9f0;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #d4a017;
+      padding: 15px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4b2e0f;
+    }
+
+    /* Slider */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover; /* image resize with proportion */
+      display: none;
+    }
+
+    .slides img.active {
+      display: block;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #d4a017;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #d4a017;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <!-- Slider Section -->
+  <div class="slider">
+    <div class="slides">
+      <img src="img/Siderbar/2.jpg.jpg" alt="Gold Ring" class="active">
+      <img src="img/Siderbar/Beige Minimalist Jewelry Store Facebook Ad.jpg" alt="Gold Necklace">
+      <img src="img/Siderbar/1.jpg.jpg" alt="Gold Earrings">
+      <!-- <img src="img/Siderbar/2.jpg.jpg" alt="Gold Earrings"> -->
+
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Gold Jewellery. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript for Slider -->
+  <script>
+    let slideIndex = 0;
+    let slides = document.querySelectorAll(".slides img");
+    let dots = document.querySelectorAll(".dot");
+
+    function showSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+      });
+      slides[n].classList.add("active");
+      dots[n].classList.add("active");
+      slideIndex = n;
+    }
+
+    function moveSlide(step) {
+      slideIndex += step;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    function currentSlide(n) {
+      showSlide(n);
+    }
+
+    // Auto slide every 4 sec
+    setInterval(() => {
+      moveSlide(1);
+    }, 4000);
+  </script>
+
+</body>
+</html>
