@@ -44,6 +44,40 @@
       color: #4b2e0f;
     }
 
+    /* Header */
+    header {
+      background: #daa520;
+      padding: 15px 0;
+      border-radius: 0 0 12px 12px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #4b2e0f;
+    }
+
     /* Hero */
     .hero {
       position: relative;
@@ -173,7 +207,185 @@
       color: white;
       font-size: 14px;
     }
+
+    /* Header styling */
+    .main-header-bg {
+      background: #025b61;
+      padding: 0;
+      margin: 0;
+    }
+    .main-header {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      padding: 0 32px;
+    }
+    .main-header .logo {
+      display: flex;
+      align-items: center;
+    }
+    .main-header .logo img {
+      height: 58px;
+      margin-right: 16px;
+    }
+    /* Search bar */
+    .header-search {
+      flex: 1;
+      margin: 0 34px;
+      display: flex;
+      align-items: center;
+    }
+    .header-search input {
+      width: 100%;
+      max-width: 600px;
+      padding: 15px 20px;
+      border-radius: 13px;
+      border: none;
+      font-size: 1.1rem;
+      background: #fff;
+      color: #2c2c2c;
+      box-sizing: border-box;
+      box-shadow: 0 2px 8px rgba(2,91,97,0.07);
+    }
+    .header-icons {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .header-icons a {
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1.09rem;
+      font-weight: 500;
+    }
+    .header-icons a:hover {
+      color: #ead37b;
+    }
+
+    /* Secondary nav */
+    .second-nav-bar {
+      background: #fff;
+      margin: 0;
+      box-shadow: 0 2px 6px rgba(2,91,97,0.07);
+      padding: 0;
+      border-bottom: 1px solid #e2e2e2;
+    }
+    .second-nav-menu {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 42px;
+      height: 54px;
+      padding: 0 34px;
+    }
+    .second-nav-menu a {
+      color: #1a3c43;
+      font-size: 1.15rem;
+      font-weight: 550;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 4px;
+      position: relative;
+    }
+    .second-nav-menu a:hover {
+      color: #1d7e91;
+    }
+    .second-nav-menu .fa-chevron-down {
+      font-size: 0.87rem;
+      margin-left: 3px;
+      opacity: 0.5;
+    }
+    @media (max-width: 960px) {
+      .main-header, .second-nav-menu { flex-wrap:wrap; gap:18px; padding: 0 8px; }
+      .second-nav-menu { gap:20px; }
+      .main-header .logo img { height:38px; }
+      .main-header { min-width: 0; padding: 0 2vw; }
+      .header-search { margin: 0 10px; }
+    }
+
+    .banner-row {
+      display: flex;
+      max-width: 1200px;
+      margin: 32px auto;
+      gap: 24px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .banner {
+      flex: 1 1 22%;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .banner img {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      object-fit: cover;
+      height: 180px;
+    }
+    .banner-content {
+      padding: 18px 20px;
+      font-family: 'Montserrat', sans-serif;
+      color: #4a3e36;
+    }
+    .banner-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .banner-content p {
+      font-size: 1rem;
+      margin-bottom: 14px;
+      color: #7a6a5a;
+      line-height: 1.3;
+    }
+    .banner-content a {
+      text-decoration: none;
+      background: #a97c50;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 700;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .banner-content a:hover {
+      background: #8b6741;
+    }
+
+    @media (max-width: 900px) {
+      .banner-row {
+        flex-direction: column;
+        max-width: 90%;
+        margin: 20px auto;
+      }
+      .banner {
+        flex: 1 1 100%;
+        height: auto;
+      }
+      .banner img {
+        height: 240px;
+      }
+    }
   </style>
+  <!-- Font Awesome CDN for social & mail/phone icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -187,42 +399,309 @@
     }
   }
   </script>
+  <!-- Font for Heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
 
   <!-- Header / Navbar -->
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
-    </nav>
-  </header>
+  <!-- HEADER START -->
+<div class="main-header-bg">
+  <div class="main-header">
+    <div class="logo">
+      <!-- <img src="https://i.ibb.co/y6w5kzR/orra-logo.png" alt="ORRA Logo"> -->
+      <div style="font-family:serif; color:#fff; font-weight:bold; font-size:1.04rem; letter-spacing:2px;line-height:1.2;">
+        ORRA<br>
+        <span style="font-size:0.98rem; font-weight:400; letter-spacing:1px;">FINE JEWELLERY</span>
+      </div>
+    </div>
+    <div class="header-search">
+      <input type="text" placeholder="Search for Diamond rings ..." />
+    </div>
+    <div class="header-icons">
+      <a href="#"><i class="fa-solid fa-store"></i> <span style="font-size:1rem;">Find a Store</span></a>
+      <a href="#"><i class="fa-regular fa-user"></i></a>
+      <a href="#"><i class="fa-regular fa-heart"></i></a>
+      <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Secondary nav bar (categories) -->
+<div class="second-nav-bar">
+  <div class="second-nav-menu">
+    <a href="#">Diamond <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Platinum <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Gold <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Rings <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Earrings <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Necklace Sets <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Gold Coins <i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#">Collections <i class="fa-solid fa-chevron-down"></i></a>
+  </div>
+</div>
+<!-- HEADER END -->
+
+<style>
+  .nav-item {
+    position: relative;
+    display: inline-block;
+  }
+  .nav-link {
+    cursor: pointer;
+    padding: 16px 32px;
+    font-size: 1.16rem;
+    color: #025b61;
+    background: #fff;
+    border: none;
+    font-weight: 600;
+  }
+  .nav-link:after {
+    content: " ▼";
+    font-size: 0.70em;
+    color: #888;
+  }
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -60px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 8px 36px rgba(30,30,30,0.16);
+    border-radius: 0 0 14px 14px;
+    padding: 36px 36px 26px 36px;
+    z-index: 88;
+  }
+  .nav-item.open .mega-menu {
+    display: flex;
+    gap: 38px;
+    justify-content: space-between;
+    animation: fadeIn .4s;
+  }
+  @keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+  }
+  .mega-column {
+    min-width: 120px;
+    max-width: 190px;
+    font-family: Arial,sans-serif;
+  }
+  .mega-title {
+    font-size: 1.09rem;
+    font-weight: 700;
+    margin-bottom: 9px;
+    border-bottom: 2px solid #eee;
+    letter-spacing: 0.5px;
+    color: #1d3c43;
+    padding-bottom: 3px;
+  }
+  .mega-menu ul, .mega-menu li {
+    list-style: none; margin: 0; padding: 0; font-size:1rem;
+  }
+  .mega-menu li {margin-bottom: 6px;}
+  .mega-menu .gold-dot {width:13px;height:13px;display:inline-block;border-radius:50%;margin-right:7px;}
+  .mega-menu .dot-yellow{background:#ead37b;}
+  .mega-menu .dot-rose{background:#e9babc;}
+  .mega-menu .dot-white{background:#d6d6d6;}
+  .mega-menu .fa-gem {color:#ab86bf;margin-right:7px;}
+  .mega-menu .fa-diamond {color:#1193b4;margin-right:7px;}
+</style>
+
+<!-- Nav Item for Diamond -->
+<div class="nav-item" id="diamondNav">
+  <button class="nav-link" onclick="toggleMenu()">Diamond</button>
+  <div class="mega-menu">
+    <!-- category -->
+    <div class="mega-column">
+      <div class="mega-title">CATEGORY</div>
+      <ul>
+        <li>All Jewellery</li>
+        <li>Necklaces</li>
+        <li>Earrings</li>
+        <li>Pendants</li>
+        <li>Necklace Sets</li>
+        <li>Nosewear</li>
+        <li>Bangles</li>
+        <li>Rings</li>
+        <li>Bracelets</li>
+        <li>Pendant Sets</li>
+        <li>Mangalsutra</li>
+      </ul>
+    </div>
+    <!-- metal colour -->
+    <div class="mega-column">
+      <div class="mega-title">SHOP BY METAL COLOUR</div>
+      <ul>
+        <li><span class="gold-dot dot-yellow"></span> YELLOW GOLD</li>
+        <li><span class="gold-dot dot-rose"></span> ROSE GOLD</li>
+        <li><span class="gold-dot dot-white"></span> WHITE GOLD</li>
+      </ul>
+      <div class="mega-title" style="margin-top:15px;">SHOP BY STONE</div>
+      <ul>
+        <li><i class="fa-regular fa-gem"></i>DIAMOND</li>
+        <li><i class="fa-solid fa-diamond"></i>SOLITAIRE</li>
+      </ul>
+    </div>
+    <!-- gender + price -->
+    <div class="mega-column">
+      <div class="mega-title">SHOP BY GENDER</div>
+      <ul>
+        <li>WOMEN</li>
+        <li>MEN</li>
+      </ul>
+      <div class="mega-title" style="margin-top:15px;">SHOP BY PRICE RANGE</div>
+      <ul>
+        <li>10K-20K</li>
+        <li>20K-50K</li>
+        <li>ABOVE 50K</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById('diamondNav').classList.toggle('open');
+}
+// Menu close on outside click
+window.addEventListener('click', function(e){
+  var box = document.getElementById('diamondNav');
+  if(!box.contains(e.target)){
+    box.classList.remove('open');
+  }
+});
+</script>
+
+<div style="width:100%;max-width:1400px;margin:38px auto 0 auto;display:flex;align-items:center;justify-content:space-between;background:#541423;border-radius:18px;box-shadow:0 4px 24px rgba(68,36,48,0.13);min-height:380px;">
+  <!-- Banner Left Content -->
+  <div style="flex:1;padding:44px 44px 44px 64px; color:#fbeed3;">
+    <h1 style="font-family:'Montserrat',serif;font-size:2.7rem;font-weight:800;margin-bottom:20px;line-height:1.13;color:#fbeed3;">
+      Celebrate Every Occasion with
+      <br><span style="display:block;font-size:2.0rem;font-weight:600;border-bottom:2px solid #ead37b;width:fit-content;margin-top:12px;margin-bottom:14px;">ASTRA by ORRA</span>
+    </h1>
+    <p style="font-size:1.22rem;color:#ead37b;margin-bottom:18px;">Diamond Necklace Sets starting at</p>
+    <div style="font-size:2.3rem;font-weight:900;background:#d2a1b1;color:#fff;padding:9px 32px;border-radius:10px;display:inline-block;box-shadow:0 2px 9px rgba(0,0,0,0.11);margin-bottom:16px;">
+      ₹1,05,999*
+    </div>
+    <br>
+    <a href="#" style="background:#fff;color:#541423;font-weight:800;padding:13px 36px;border-radius:8px;text-decoration:none;font-size:1.14rem;margin-top:14px;display:inline-block;">Shop Now</a>
+    <span style="color:#ead37b;font-size:0.9rem;margin-left:12px;">*T&C Apply</span>
+  </div>
+  <!-- Banner Image Right -->
+  <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;">
+    <img src="img/Siderbar/Beige Minimalist Jewelry Store Facebook Ad.jpg" alt="Jewellery Banner" style="max-width:480px;border-radius:16px;box-shadow:0 8px 28px rgba(68,36,48,0.19);margin:32px 38px 32px 0;">
+  </div>
+</div>
+
+<div class="banner-row">
+  <!-- Banner 1 -->
+  <div class="banner">
+    <img src="img/necklace/1.jpg" alt="Astra Necklaces" />
+    <div class="banner-content">
+      <h3>Astra Necklaces</h3>
+      <p>Diamond Necklace Sets starting at ₹1,05,999*</p>
+      <a href="#">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Banner 2 -->
+  <div class="banner">
+    <img src="img/ring/13.jpg" alt="Gold Wedding Sets" />
+    <div class="banner-content">
+      <h3>Gold Wedding Sets</h3>
+      <p>Handcrafted traditions made for your wedding moments.</p>
+      <a href="#">View Collection</a>
+    </div>
+  </div>
+
+  <!-- Banner 3 -->
+  <div class="banner">
+    <img src="img/ring/14.JPG" alt="Platinum Bands" />
+    <div class="banner-content">
+      <h3>Platinum Bands</h3>
+      <p>Mark your milestones with Platinum rings that last forever.</p>
+      <a href="#">Explore Rings</a>
+    </div>
+  </div>
+
+  <!-- Banner 4 -->
+  <div class="banner">
+    <img src="img/Earrings/8.jpg" alt="Designer Earrings" />
+    <div class="banner-content">
+      <h3>Designer Earrings</h3>
+      <p>Thousands of stunning designs for every celebration.</p>
+      <a href="#">Shop Earrings</a>
+    </div>
+  </div>
+</div>
 
   <!-- Hero Section -->
   <main id="main">
-  <section class="hero" aria-label="Festive gold jewellery hero">
-    <div class="content">
-      <h1>Radiant Traditions</h1>
-      <p>Celebrate cultural elegance with handcrafted gold necklaces, earrings, and bangles.</p>
-      <div class="sub">Gracefully designed for weddings, festivities, and treasured moments.</div>
-      <a class="cta" href="products.html">Shop Gold Collection</a>
-    </div>
-    <img class="model" src="img/Siderbar/Blue Gray Modern Jewellery Facebook Ad.jpg" alt="Graceful Indian woman wearing traditional gold necklace, earrings, and bangles" loading="eager" fetchpriority="high">
-  </section>
   </main>
   
 
   <!-- Footer -->
-  <footer>
-    © 2025 Gold Jewellery. All Rights Reserved.
+  <footer style="background:#015b63; color:#fff; padding:40px 0 20px 0;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:36px; justify-content:space-between;">
+      <div style="min-width:200px; flex:1;">
+        <h3 style="margin-bottom:14px;">Get to Know</h3>
+        <p><a href="#" style="color:#fff; text-decoration:none;">About Us</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Press</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Blogs</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Careers</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Contact Us</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Corporate Governance</a></p>
+      </div>
+      <div style="min-width:200px; flex:1;">
+        <h3 style="margin-bottom:14px;">Customer Service</h3>
+        <p><a href="#" style="color:#fff; text-decoration:none;">7 Days Return Policy</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Lifetime Exchange &amp; Buyback</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Privacy Policy</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Terms &amp; Conditions</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">FAQ's</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Find Store</a></p>
+      </div>
+      <div style="min-width:200px; flex:1;">
+        <h3 style="margin-bottom:14px;">Know your Jewellery</h3>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Diamond Guide</a></p>
+        <p><a href="#" style="color:#fff; text-decoration:none;">Platinum Guide</a></p>
+      </div>
+      <div style="min-width:220px; flex:1;">
+        <h3 style="margin-bottom:14px;">Contact Us</h3>
+        <p><i class="fa-solid fa-phone"></i> 1800-2661888</p>
+        <p><i class="fa-solid fa-envelope"></i> customercare@orra.co.in</p>
+        <p><i class="fa-solid fa-envelope"></i> HR - enquiries@orra.co.in</p>
+        <p><i class="fa-solid fa-envelope"></i> General/Corporate - enquiries@orra.co.in</p>
+        <p><i class="fa-solid fa-envelope"></i> Grievance - customercare@orra.co.in</p>
+      </div>
+      <div style="min-width:220px; flex:1;">
+        <h3 style="margin-bottom:14px;">Registered Office</h3>
+        <p>House of ORRA, Aver House Building,</p>
+        <p>Plot B26, Off. New Link Road,<br>Opp. Citi Mall, Andheri West,<br>Mumbai - 400053</p>
+        <p>CIN:<br>U36911MH1991PTC061736</p>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:32px auto 0 auto;">
+      <h3 style="margin-bottom:10px;">Follow Us On</h3>
+      <div style="display: flex; gap:24px; align-items: center; font-size:2rem;">
+        <a href="#" style="color:#fff;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:#fff;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" style="color:#fff;"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" style="color:#fff;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="color:#fff;"><i class="fab fa-youtube"></i></a>
+        <a href="#" style="color:#fff;"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:32px auto 0 auto; padding-top:8px; border-top:1px solid #99b9b8; font-size:0.95rem; text-align:center; color:#d2e2e1;">
+      ©2025 ORRA. All Rights Reserved<br>
+      <span style="font-size:0.9rem;">
+        Privacy Policy | Terms & Conditions | Terms of Use | Disclaimer
+      </span>
+    </div>
   </footer>
-
-  
-
+<!-- Footer End -->
 </body>
 </html>
