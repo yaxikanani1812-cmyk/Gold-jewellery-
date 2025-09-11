@@ -7,6 +7,8 @@
   <link rel="canonical" href="about.html">
   <title>About Us | Gold Jewellery</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -18,15 +20,46 @@
   <link rel="prefetch" href="products.html">
 </head>
 <body>
-  <header>
-    <div class="logo">✨ Gold Jewellery ✨</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
+  <!-- GIVA Minimal Header Start -->
+  <div class="giva-header">
+    <div class="giva-topline">
+      <a href="index.html" class="giva-brand">
+        <div class="giva-logo">GIVA</div>
+        <div class="giva-location" role="button" tabindex="0" aria-haspopup="listbox">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div>
+            <div class="loc-label">Where to Deliver?</div>
+            <div class="loc-sub">Update pincode</div>
+          </div>
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </a>
+      <div class="giva-search">
+        <form class="search-wrap" action="products.html" method="get">
+          <input type="search" name="q" placeholder='Search "Bracelets"' aria-label='Search "Bracelets"'>
+          <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+        </form>
+      </div>
+      <div class="giva-actions">
+        <a class="giva-action" href="#" title="Stores"><i class="fa-solid fa-store"></i><span>STORES</span></a>
+        <a class="giva-action" href="Login.html" title="Account"><i class="fa-regular fa-user"></i><span>ACCOUNT</span></a>
+        <a class="giva-action" href="#" title="Wishlist"><i class="fa-regular fa-heart"></i><span>WISHLIST</span></a>
+        <a class="giva-action" href="#" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span>CART</span></a>
+      </div>
+    </div>
+    <nav class="giva-nav" aria-label="Primary">
+      <div class="giva-menu">
+        <a href="#" data-dd data-items="Rings|Earrings|Necklaces & Pendants|Bracelets|Anklets"><span>Shop by Category</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#" class="is-active">Gold with Lab Diamonds</a>
+        <a href="#">GIVA Gift Card</a>
+        <a href="#" data-dd data-items="For Her|For Him|For Mom|Under 4B0700|Occasions"><span>Gift Store</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#" data-dd data-items="Rings|Bracelets|Chains|Cufflinks"><span>Men's Jewellery</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#">Latest Collections</a>
+        <a href="#" data-dd data-items="Stores|Track Order|Support|GIVA Blog"><span>More at GIVA</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+      </div>
     </nav>
-  </header>
+  </div>
+  <!-- GIVA Minimal Header End -->
 
   <main class="page" id="main">
     <h1>About Us</h1>

@@ -7,6 +7,8 @@
   <link rel="canonical" href="products.html">
   <title>Products | Gold Jewellery</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -17,31 +19,46 @@
   </script>
 </head>
 <body>
-  <!-- Header Start -->
-<header style="background:#daa520; padding:15px 0; border-radius:0 0 12px 12px;">
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <h1 style="margin: 0 0 10px 0; font-size:2rem; color:#fff; font-weight:bold;">
-      ✨ Gold Jewellery ✨
-    </h1>
-    <nav>
-      <ul style="display: flex; justify-content: center; align-items: center; gap: 48px; list-style: none; padding: 0; margin: 0;">
-        <li>
-          <a href="index.html" style="text-decoration:none; color:#fff; font-size:1.2rem;">Home</a>
-        </li>
-        <li>
-          <a href="about.html" style="text-decoration:none; color:#fff; font-size:1.2rem;">About Us</a>
-        </li>
-        <li>
-          <a href="products.html" style="text-decoration:none; color:#fff; font-size:1.2rem;">Products</a>
-        </li>
-        <li>
-          <a href="contact.html" style="text-decoration:none; color:#fff; font-size:1.2rem;">Contact</a>
-        </li>
-      </ul>
+  <!-- GIVA Minimal Header Start -->
+  <div class="giva-header">
+    <div class="giva-topline">
+      <a href="index.html" class="giva-brand">
+        <div class="giva-logo">GIVA</div>
+        <div class="giva-location" role="button" tabindex="0" aria-haspopup="listbox">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div>
+            <div class="loc-label">Where to Deliver?</div>
+            <div class="loc-sub">Update pincode</div>
+          </div>
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </a>
+      <div class="giva-search">
+        <form class="search-wrap" action="products.html" method="get">
+          <input type="search" name="q" placeholder='Search "Bracelets"' aria-label='Search "Bracelets"'>
+          <i class="fa-solid fa-magnifying-glass icon" aria-hidden="true"></i>
+        </form>
+      </div>
+      <div class="giva-actions">
+        <a class="giva-action" href="#" title="Stores"><i class="fa-solid fa-store"></i><span>STORES</span></a>
+        <a class="giva-action" href="Login.html" title="Account"><i class="fa-regular fa-user"></i><span>ACCOUNT</span></a>
+        <a class="giva-action" href="#" title="Wishlist"><i class="fa-regular fa-heart"></i><span>WISHLIST</span></a>
+        <a class="giva-action" href="#" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span>CART</span></a>
+      </div>
+    </div>
+    <nav class="giva-nav" aria-label="Primary">
+      <div class="giva-menu">
+        <a href="#" data-dd data-items="Rings|Earrings|Necklaces & Pendants|Bracelets|Anklets"><span>Shop by Category</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#" class="is-active">Gold with Lab Diamonds</a>
+        <a href="#">GIVA Gift Card</a>
+        <a href="#" data-dd data-items="For Her|For Him|For Mom|Under 4B0700|Occasions"><span>Gift Store</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#" data-dd data-items="Rings|Bracelets|Chains|Cufflinks"><span>Men's Jewellery</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+        <a href="#">Latest Collections</a>
+        <a href="#" data-dd data-items="Stores|Track Order|Support|GIVA Blog"><span>More at GIVA</span> <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></a>
+      </div>
     </nav>
   </div>
-</header>
-<!-- Header End -->
+  <!-- GIVA Minimal Header End -->
 
   <main class="page" id="main">
     <h1>Our Gold Jewellery Collection</h1>

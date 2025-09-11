@@ -66,3 +66,186 @@ footer { text-align: center; padding: 15px; background: goldenrod; color: white;
   padding: 20px;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
 }
+
+/* GIVA Minimal Header */
+.giva-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  color: #111;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.giva-topline {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 16px;
+}
+.giva-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.giva-logo {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.16em;
+}
+.giva-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-width: 260px;
+}
+.giva-location i { color: #000; opacity: 0.8; }
+.giva-location .loc-label { font-weight: 600; font-size: 0.95rem; }
+.giva-location .loc-sub { font-size: 0.9rem; color: #444; }
+.giva-location .loc-action { margin-left: auto; color: #111; font-size: 0.92rem; }
+
+.giva-search { display: flex; justify-content: center; }
+.giva-search .search-wrap { position: relative; width: min(760px, 92%); }
+.giva-search input[type="search"] {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  padding: 13px 48px 13px 16px;
+  font-size: 0.98rem;
+  color: #111;
+  background: #fff;
+}
+.giva-search .icon { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #000; opacity: 0.8; }
+
+.giva-actions { display: flex; justify-content: flex-end; align-items: center; gap: 18px; }
+.giva-action { display: flex; align-items: center; gap: 8px; color: #111; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+.giva-action i { color: #000; opacity: 0.9; }
+.giva-action:hover { color: #000; opacity: 0.85; }
+
+.giva-nav {
+  border-top: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+.giva-menu {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+}
+.giva-menu a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.giva-menu a:hover { color: #000; border-bottom-color: #111; }
+.giva-menu a.is-active { border-bottom-color: #111; }
+.giva-menu .chev { font-size: 0.86em; opacity: 0.6; }
+
+/* Dropdown */
+.giva-menu { position: relative; }
+.giva-dd {
+  position: absolute;
+  top: 100%;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 8px;
+  z-index: 30;
+}
+.giva-dd a { display: block; padding: 10px 12px; border-radius: 8px; font-weight: 600; color: #111; text-decoration: none; }
+.giva-dd a:hover { background: #f7f7f7; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .giva-topline { grid-template-columns: 1fr; gap: 10px; }
+  .giva-actions { justify-content: center; }
+  .giva-brand { justify-content: center; }
+}
+@media (max-width: 640px) {
+  .giva-location .loc-label, .giva-location .loc-sub { display: none; }
+  .giva-location { min-width: auto; }
+  .giva-menu { gap: 16px; overflow-x: auto; justify-content: flex-start; }
+}
+
+/* =====================
+   New GIVA Hero Section
+   ===================== */
+.giva-hero {
+  position: relative;
+  background: 
+    linear-gradient(120deg, rgba(255,255,255,0.85), rgba(255,255,255,0.60)),
+    url('../img/necklace/4.jpg') center/cover no-repeat;
+  border-bottom: 1px solid #e6e6e6;
+}
+.giva-hero-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  padding: 56px 20px;
+  min-height: 520px;
+}
+.giva-hero .badge {
+  align-self: start;
+  background: #fff;
+  border: 2px solid #dcc28b;
+  color: #6b5526;
+  border-radius: 16px;
+  padding: 18px 22px;
+  width: fit-content;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.giva-hero .badge .kicker { font-weight: 800; letter-spacing: 0.08em; color: #b08d3a; font-size: 0.95rem; }
+.giva-hero .badge .title { font-family: "Inter", Arial, sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.04em; color: #6b5526; }
+
+.giva-hero .content {
+  align-self: center;
+  justify-self: end;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 26px 28px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08);
+}
+.giva-hero h1 { margin: 0 0 8px 0; font-size: 2.6rem; color: #2a2a2a; letter-spacing: 0.02em; }
+.giva-hero .offer { margin: 6px 0 16px 0; font-size: 1.05rem; color: #3c3c3c; }
+.giva-hero .offer b { color: #1f3b2d; }
+.giva-hero .cta {
+  display: inline-block;
+  background: #16a085; /* teal/emerald */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 1px solid #138871;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.giva-hero .cta:hover { background: #169b80; box-shadow: 0 10px 22px rgba(22,160,133,0.28); transform: translateY(-1px); }
+
+/* Reveal Animations */
+.reveal { opacity: 0; transform: translateY(16px); }
+.reveal.in-view { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease; }
+
+@media (max-width: 992px) {
+  .giva-hero-inner { grid-template-columns: 1fr; min-height: 460px; }
+  .giva-hero .content { justify-self: start; }
+}
