@@ -249,3 +249,33 @@ footer { text-align: center; padding: 15px; background: goldenrod; color: white;
   .giva-hero-inner { grid-template-columns: 1fr; min-height: 460px; }
   .giva-hero .content { justify-self: start; }
 }
+
+/* =====================
+   Single Interactive Card
+   Apply to one item: add class "hover-pointer"
+   ===================== */
+.hover-pointer {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+  will-change: transform, box-shadow, filter;
+}
+.hover-pointer img {
+  transition: transform .28s ease, filter .28s ease;
+}
+.hover-pointer:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.16), 0 8px 10px rgba(0,0,0,0.10);
+  filter: saturate(1.05);
+}
+.hover-pointer:hover img {
+  transform: scale(1.06);
+}
+.hover-pointer h2, .hover-pointer .label {
+  transition: color .22s ease, text-shadow .22s ease;
+}
+.hover-pointer:hover h2, .hover-pointer:hover .label {
+  color: #b8860b;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
