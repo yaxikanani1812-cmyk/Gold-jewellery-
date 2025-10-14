@@ -811,6 +811,30 @@ header {
   color: #232323;
   letter-spacing: 0.5px;
 }
+a {
+  text-decoration: none;
+}
+.Mangalsutra-link {
+  text-decoration: none;
+}
+.Gold-link {
+  text-decoration: none;
+}
+.Rings-link {
+  text-decoration: none;
+}
+.Diamond-link {
+  text-decoration: none;
+}
+.Earrings-link {
+  text-decoration: none;
+}
+.Pendant-link {
+  text-decoration: none;
+}
+.Necklaces-link {
+  text-decoration: none;
+}
 .timeless-card.active, .timeless-card:active {
   background: #618d92;
 }
