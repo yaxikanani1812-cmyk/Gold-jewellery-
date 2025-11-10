@@ -42,3 +42,24 @@ const products= [
  { name: "ASTRA", price: "₹1,59,999*", image: "/IMG/Sets/3.jpeg" },
   // ... more products
 ];
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("loginPopup");
+  const userIcon = document.getElementById("userIcon");
+  const closePopup = document.getElementById("closePopup");
+
+  userIcon.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
