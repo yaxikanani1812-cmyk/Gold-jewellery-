@@ -63,3 +63,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.getElementById('heroSlider');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const dotsWrap = document.getElementById('heroDots');
+  let current = 0;
+  const delay = 4000;
+  let interval;
+
+  // Create dots
+  dotsWrap.innerHTML = '';
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function update() {
+    // Move slider using translateX
+    slider.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function next() {
+    current = (current + 1) % slides.length;
+    update();
+  }
+
+  function goTo(i) {
+    current = i;
+    update();
+    restart();
+  }
+
+  function start() {
+    interval = setInterval(next, delay);
+  }
+
+  function pause() {
+    clearInterval(interval);
+    interval = null;
+  }
+
+  function restart() {
+    pause();
+    start();
+  }
+
+  slider.addEventListener('mouseenter', pause);
+  slider.addEventListener('mouseleave', start);
+
+  update();
+  start();
+});
