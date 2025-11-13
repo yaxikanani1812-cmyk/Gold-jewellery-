@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Login</title>
-    <link rel="stylesheet" href="../CSS/login.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Rubans Style</title>
+  <link rel="stylesheet" href="/CSS/login.css">
+  <script  src="/js/login.js"></script>
 </head>
+
 <body>
   <div class="login-popup">
+    <span class="close-btn" onclick="closePopup()">✕</span>
+
     <!-- Left -->
     <div class="left-side">
-      <h1>Rubans</h1>
+      <div class="logo">Rubans</div>
       <h3>Login now to avail best offers!</h3>
       <div class="features">
         <div class="feature-box">
@@ -33,10 +37,14 @@
 
     <!-- Right -->
     <div class="right-side">
-      <h2>Unlock Exclusive deals Now!</h2>
+      <h2>Unlock Exclusive Deals Now!</h2>
+
       <div class="input-box">
         <select>
           <option>+91</option>
+          <option>++4</option>
+          <option>+47</option>
+          <option>+63</option>
         </select>
         <input type="text" placeholder="Enter Mobile Number" />
       </div>

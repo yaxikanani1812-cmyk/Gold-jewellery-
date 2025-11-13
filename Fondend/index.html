@@ -26,7 +26,9 @@
       <input type="text" class="search-bar" placeholder="Search for Diamond rings ..." />
       <div class="header-icons">
         <span class="icon"><i class="fa fa-store"></i> Find a Store</span>
-        <span class="icon"><i class="fa fa-user"></i></span>
+        <a href="login.html" target="_blank" class="icon">
+          <i class="fa fa-user"></i>
+        </a>
         <span class="icon"><i class="fa fa-heart"></i></span>
         <span class="icon"><i class="fa fa-shopping-bag"></i></span>
       </div>
@@ -271,24 +273,24 @@
 
       </ul>
     </nav>
-   
+
   </header>
-<!-- ===== HERO SLIDER START ===== -->
-<section class="hero-slider-wrap">
-  <div class="hero-slider" id="heroSlider" >
-    <!-- slides will be injected by JS if using backend; or paste static slides -->
-    <div class="slide" style="background-image:url('/IMG/Sider/7.jpg');">
-      <div class="slide-inner">
-        <div class="kicker">NEW COLLECTION</div>
-        <h1>Timeless Elegance in Every Piece</h1>
-        <p class="lead">Discover handcrafted jewellery with an everlasting shine</p>
-        <div class="hero-ctas">
-          <a href="Diamond.html" class="btn btn-primary">Shop Now</a>
-          <a href="Gold.html" class="btn btn-ghost">Explore Collections</a>
+  <!-- ===== HERO SLIDER START ===== -->
+  <section class="hero-slider-wrap">
+    <div class="hero-slider" id="heroSlider">
+      <!-- slides will be injected by JS if using backend; or paste static slides -->
+      <div class="slide" style="background-image:url('/IMG/Sider/7.jpg');">
+        <div class="slide-inner">
+          <div class="kicker">NEW COLLECTION</div>
+          <h1>Timeless Elegance in Every Piece</h1>
+          <p class="lead">Discover handcrafted jewellery with an everlasting shine</p>
+          <div class="hero-ctas">
+            <a href="Diamond.html" class="btn btn-primary">Shop Now</a>
+            <a href="Gold.html" class="btn btn-ghost">Explore Collections</a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- <div class="slide" style="background-image:url('/IMG/Sider/4.jpg');">
+      <!-- <div class="slide" style="background-image:url('/IMG/Sider/4.jpg');">
       <div class="slide-inner">
         <div class="kicker">NEW COLLECTION</div>
         <h1>Timeless Elegance in Every Piece</h1>
@@ -300,37 +302,37 @@
       </div>
     </div> -->
 
-    <div class="slide" style="background-image:url('/IMG/Sider/4.jpg');">
-      <div class="slide-inner">
-        <div class="kicker">EXCLUSIVE</div>
-        <h1>Brilliance That Lasts</h1>
-        <p class="lead">Crafted to perfection — shop our latest diamond range</p>
-        <div class="hero-ctas">
-          <a href="Diamond.html" class="btn btn-primary">View Collection</a>
+      <div class="slide" style="background-image:url('/IMG/Sider/4.jpg');">
+        <div class="slide-inner">
+          <div class="kicker">EXCLUSIVE</div>
+          <h1>Brilliance That Lasts</h1>
+          <p class="lead">Crafted to perfection — shop our latest diamond range</p>
+          <div class="hero-ctas">
+            <a href="Diamond.html" class="btn btn-primary">View Collection</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="slide" style="background-image:url('/IMG/Sider/6.jpg');">
-      <div class="slide-inner">
-        <div class="kicker">LIMITED OFFER</div>
-        <h1>Festive Offers Up to 30% Off</h1>
-        <p class="lead">Celebrate with timeless pieces — limited period only</p>
-        <div class="hero-ctas">
-          <a href="Platinum.html" class="btn btn-primary">Grab the Offer</a>
+      <div class="slide" style="background-image:url('/IMG/Sider/6.jpg');">
+        <div class="slide-inner">
+          <div class="kicker">LIMITED OFFER</div>
+          <h1>Festive Offers Up to 30% Off</h1>
+          <p class="lead">Celebrate with timeless pieces — limited period only</p>
+          <div class="hero-ctas">
+            <a href="Platinum.html" class="btn btn-primary">Grab the Offer</a>
+          </div>
         </div>
       </div>
+
+      <!-- navigation -->
+      <button class="hero-prev" aria-label="Previous slide">‹</button>
+      <button class="hero-next" aria-label="Next slide">›</button>
+
+      <!-- dots -->
+      <div class="hero-dots" id="heroDots"></div>
     </div>
-
-    <!-- navigation -->
-    <button class="hero-prev" aria-label="Previous slide">‹</button>
-    <button class="hero-next" aria-label="Next slide">›</button>
-
-    <!-- dots -->
-    <div class="hero-dots" id="heroDots"></div>
-  </div>
-</section>
-<!-- ===== HERO SLIDER END ===== -->
+  </section>
+  <!-- ===== HERO SLIDER END ===== -->
 
   <div class="welcome-banner">
     Welcome To ORRA, Your Destination For Dazzling Diamonds Just Like You!
@@ -354,7 +356,7 @@
       <img src="/IMG/Pendants/1.jpg" alt="Pendants">
       <div class="cat-label">Pendants</div>
     </a>
-     
+
 
     <a href="Diamond.html" class="cat-card">
       <img src="/IMG/silver chain/1.jpg" alt="Silver Chain">
