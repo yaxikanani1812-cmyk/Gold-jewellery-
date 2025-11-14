@@ -19,13 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
   
+  document.getElementById("loginBtn").addEventListener("click", function (e) {
+    e.preventDefault(); 
+    window.location.href = "index.html";
+  });
+
+
    
-//  document.getElementById("submitBtn").addEventListener("click", function () {
-//       const mobile = document.getElementById("mobile").value.trim();
-//       if (mobile.length >= 10) {
-//         window.location.href = "index.html"; // ✅ redirect
-//       } else {
-//         alert("Please enter a valid mobile number!");
-//       }
-//     });
+
 

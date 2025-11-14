@@ -57,7 +57,7 @@ app.get("/api/slides", (req, res) => {
       cta: "Diamond.html"
     },
     {
-      image: "/IMG/Sider/4.jpge",
+      image: "/IMG/Sider/4.jpg",
       kicker: "EXCLUSIVE",
       title: "Brilliance That Lasts",
       sub: "Crafted to perfection — shop our latest diamond range",
