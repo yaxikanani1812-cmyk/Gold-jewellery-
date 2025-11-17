@@ -18,3 +18,11 @@ checkboxes.forEach(box => {
     // Tamara product grid modify karo, jem filter select thay te product j dekhaay
   });
 });
+
+
+
+let slider = document.querySelector(".video-slider");
+
+setInterval(() => {
+    slider.scrollLeft += 1;
+}, 20);
